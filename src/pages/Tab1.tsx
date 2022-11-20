@@ -1,24 +1,23 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonMenu, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenuButton, IonButton, IonIcon } from '@ionic/react';
+import { menu, star } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
-        </IonToolbar>
+      <IonHeader translucent={true}>
+      <IonToolbar>
+        <IonButtons slot="start">
+          <IonMenuButton autoHide={false}></IonMenuButton>
+        </IonButtons>
+        <IonTitle>title var</IonTitle>
+      </IonToolbar>        
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+      <IonContent fullscreen={true} className="ion-padding">
+        <ExploreContainer name="Noticias" />
       </IonContent>
-    </IonPage>
+    </IonPage >
   );
 };
 
