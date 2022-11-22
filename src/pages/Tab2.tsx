@@ -1,5 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonCol, useIonViewWillEnter } from '@ionic/react';
-import { map } from 'ionicons/icons';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonCol, useIonViewWillEnter, IonSearchbar, IonButton, IonButtons, IonIcon, IonMenuButton, IonChip, IonAvatar, IonLabel, IonText, IonModal, IonList, IonItem, IonImg } from '@ionic/react';
+import { closeCircle, mailOpen, map, personCircle } from 'ionicons/icons';
 import { useRef, useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
@@ -13,12 +13,14 @@ const Tab2: React.FC = () => {
   const mapRef = useRef(null);
 
   const [mapConfig, setMapConfig] = useState({
-    zoom: 5,
+    zoom: 7,
     center: {
       lat: markers[0].lat,
       lng: markers[0].lng
     },
     mapId: '4a6551b8f2c8be12',
+    fullscreenControl: false,
+    disableDefaultUI: true,
   })
 
   const createMap = async () => {
@@ -28,29 +30,21 @@ const Tab2: React.FC = () => {
       element: mapRef.current,
       apiKey: Key,
       config: mapConfig
-    });  }
+    });
+  }
 
-    useIonViewWillEnter(() => createMap());
+
+  const modal = useRef<HTMLIonModalElement>(null);
+
+
+  useIonViewWillEnter(() => createMap());
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Mapa</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Mapa</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonRow>
-          <IonCol size="12">
-            <capacitor-google-map ref={mapRef} id="map">
-              
-              </capacitor-google-map> 
-          </IonCol>
-          </IonRow>
+      <IonContent fullscreen={true} className="">
+        <capacitor-google-map ref={mapRef} id="map">
+
+        </capacitor-google-map>
+
         {/* <ExploreContainer name="Tab 2 page" /> */}
       </IonContent>
     </IonPage>
