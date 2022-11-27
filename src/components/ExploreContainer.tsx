@@ -1,5 +1,5 @@
 import './ExploreContainer.css';
-import {IonGrid, IonRow } from '@ionic/react';
+import {IonGrid, IonInput, IonRow } from '@ionic/react';
 import CityTrends from './Tab1/CityTends'
 import NotesTrends from './Tab1/NotesTrends';
 import Filter from './Tab1/Filter';
@@ -10,7 +10,7 @@ interface ContainerProps {
 }
 
 const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
-
+  const uploadImage = () => {};
   return (
     <div className="container ">
       <IonGrid fixed={true}>
@@ -18,7 +18,8 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
         <IonRow>
           <NotesTrends/>
           <Filter/>
-          <CardMain/>          
+          <CardMain/> 
+          
         </IonRow>
       </IonGrid>
     </div>
