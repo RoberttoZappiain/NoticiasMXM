@@ -12,7 +12,29 @@ ion-col {
   margin-left: 5.5px!important;
   margin-right: 5.5px!important;
   border-radius: 15px!important;
+  
 }
+.centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+.Bg1{
+  position: absolute;
+  background-color: gray;
+  opacity: 0.6;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  top: 90%;
+}
+#slidesimg{
+  height: 100%!important;
+  object-fit: cover;}
 #slides2 {
   width: auto!important;
   height: 50px!important;

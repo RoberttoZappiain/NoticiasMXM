@@ -21,23 +21,23 @@ const CityTrends: React.FC= () => {
         <IonRow>
             <IonCol size='12'>
                 <div className="ion-text-start">
-                    <h3>title var</h3>
+                    <h3>Ciudades</h3>
                 </div>
                 <IonSlides id='slides' options={slideOpts}>
                     <IonSlide id='slides2'>
-                        <IonChip color="dark">city_name</IonChip>
+                        <IonChip color="dark">CDMX</IonChip>
                     </IonSlide>
                     <IonSlide id='slides2'>
-                    <IonChip color="dark">city_name</IonChip>
+                    <IonChip color="dark">Guadalajara</IonChip>
                     </IonSlide>
                     <IonSlide id='slides2'>
-                    <IonChip color="dark">city_name</IonChip>
+                    <IonChip color="dark">Monterrey</IonChip>
                     </IonSlide>
                     <IonSlide id='slides2'>
-                    <IonChip color="dark">city_name</IonChip>
+                    <IonChip color="dark">Nayarit</IonChip>
                     </IonSlide>
                     <IonSlide id='slides2'>
-                    <IonChip color="dark">city_name</IonChip>
+                    <IonChip color="dark">Campeche</IonChip>
                     </IonSlide>
                 </IonSlides>
             </IonCol>

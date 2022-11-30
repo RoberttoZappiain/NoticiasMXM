@@ -1,12 +1,17 @@
 import { IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonLabel } from "@ionic/react";
 
-const SlIdeNotas: React.FC = () => {
+interface ContainerProps {
+    title: string;
+    date: String;
+  }
+
+const SlIdeNotas: React.FC<ContainerProps> = ({title, date}) => {
     return (
         <IonItemSliding>
         <IonItem>
             <IonLabel class="ion-text-wrap">
-            <h2 style={{marginTop:"20px"}}>titulo_nota </h2>
-            <p>fecha: 20/20/20</p>
+            <h2 style={{marginTop:"20px"}}>{title} </h2>
+            <p>fecha: {date}</p>
             </IonLabel>
         </IonItem>
         <IonItemOptions>

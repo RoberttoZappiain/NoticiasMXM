@@ -12,20 +12,20 @@ const Filter: React.FC = () => {
             name: 'filter_name',
             options: [
               {
-                text: 'city_name',
-                value: 'city_name',
+                text: 'Guadalajara',
+                value: 'Guadalajara',
               },
               {
-                text: 'city_name',
-                value: 'city_name',
+                text: 'CDMX',
+                value: 'CDMX',
               },
               {
-                text: 'city_name',
-                value: 'city_name',
+                text: 'Monterrey',
+                value: 'Monterrey',
               },
               {
-                text: 'city_name',
-                value: 'city_name#',
+                text: 'Nayarit',
+                value: 'Nayarit#',
               },
             ],
           },
