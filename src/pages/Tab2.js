@@ -32,13 +32,15 @@ const Tab2 = () => {
   };
 
   const [mapConfig, setMapConfig] = useState({
-    
-    zoom: 10,
+    zoom: 5,
+    zoom: 7,
     center: {
-
       lat: markers[0].lat,
       lng: markers[0].lng
-    }
+    },
+    mapId: '4a6551b8f2c8be12',
+    fullscreenControl: false,
+    disableDefaultUI: true,
   });
 
   const markerClick = marker => {
@@ -82,13 +84,13 @@ const Tab2 = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Capacitor Google Map</IonTitle>
+          <IonTitle>Noticias en el mapa</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Capacitor Google Map</IonTitle>
+            <IonTitle size="large">Noticias en el mapa</IonTitle>
           </IonToolbar>
         </IonHeader>
 
