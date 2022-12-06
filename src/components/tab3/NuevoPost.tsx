@@ -1,7 +1,8 @@
-import { IonActionSheet, IonBackButton, IonAvatar, IonButton, IonButtons, IonCol, IonContent, IonDatetime, IonDatetimeButton, IonFab, IonFabButton, IonGrid, IonHeader, IonIcon, IonImg, IonInput, IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonLabel, IonList, IonListHeader, IonModal, IonNavLink, IonPage, IonRow, IonTextarea, IonTitle, IonToggle, IonToolbar, useIonViewWillEnter } from '@ionic/react';
-import { camera,  trash } from 'ionicons/icons';
+import { IonActionSheet, IonBackButton, IonAvatar, IonButton, IonButtons, IonCol, IonContent, IonDatetime, IonDatetimeButton, IonFab, IonFabButton, IonGrid, IonHeader, IonIcon, IonImg, IonInput, IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonLabel, IonList, IonListHeader, IonModal, IonNavLink, IonPage, IonRow, IonTextarea, IonTitle, IonToggle, IonToolbar, useIonViewWillEnter, useIonToast } from '@ionic/react';
+import { camera, trash } from 'ionicons/icons';
 import { useEffect, useRef, useState } from 'react';
 import { usePhotoGallery, UserPhoto } from '../../hooks/usePhotoGallery';
+import { Camera, CameraResultType } from '@capacitor/camera';
 
 import { firebaseConfig } from '../../database/config'
 import firebase from 'firebase/app'; // npm i firebase
@@ -11,13 +12,30 @@ import { equipo } from '../../modelo/equipo'
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
+
+
+
+
 function NuevoPost() {
+
+
+    const [present] = useIonToast();
+
+  const presentToast = (position: 'top' | 'middle' | 'bottom') => {
+    present({
+      message: 'Nota publicada correctamente!',
+      duration: 3500,
+      position: position
+    });
+  };
     const [listaEquipo, setListaEquipo] = useState<equipo[]>([]);
     const [id, setId] = useState('');
     const [nombre, setNombre] = useState('');
     const [titulos, setTitulos] = useState('');
     const [mensaje, setMensaje] = useState(false);
     const [bandera, setBandera] = useState(true);
+
+
     const listar = async () => {
         try {
             let lista: equipo[] = []
@@ -90,7 +108,9 @@ function NuevoPost() {
     function dismiss() {
         modal.current?.dismiss();
     }
+
     return (
+
         <>
             <IonHeader>
                 <IonToolbar>
@@ -105,8 +125,8 @@ function NuevoPost() {
                     <IonGrid>
                         <IonRow>
                             {photos.map((photo, index) => (
-                                <IonCol size="6" key={index}>
-                                    <IonImg style={{ maxWidth: "250px" }} onClick={() => setPhotoToDelete(photo)} src={photo.webviewPath} />
+                                <IonCol size="12" key={index} style={{ backgroundColor: "red" }}>
+                                    <IonImg onClick={() => setPhotoToDelete(photo)} src={photo.webviewPath} />
                                 </IonCol>
                             ))}
                         </IonRow>
@@ -158,16 +178,15 @@ function NuevoPost() {
                                 <IonModal keepContentsMounted={true}>
                                     <IonDatetime id="datetime"></IonDatetime>
                                 </IonModal>
-
-
                             </IonCol>
                             <IonCol size='6' color='primary'>
-                                <IonFabButton style={{ marginLeft: "50px" }} color={"light"} onClick={() => takePhoto()}>
-                                    <IonIcon icon={camera}></IonIcon>
-                                </IonFabButton>
+
+                                    <IonFabButton style={{ marginLeft: "50px" }} color={"light"} onClick={() => takePhoto()}>
+                                        <IonIcon icon={camera}></IonIcon>
+                                    </IonFabButton>
                             </IonCol>
                             <IonCol size='6' >
-                                <IonButton expand="block" color="light" style={{ marginRight: "40px" }} size="default" onClick={() => crear()}>Publicar</IonButton>
+                                <IonButton expand="block" color="light" style={{ marginRight: "40px" }} size="default" onClick={() => presentToast('bottom')}>Publicar</IonButton>
                             </IonCol>
                         </IonRow>
                     </IonGrid>
@@ -183,3 +202,4 @@ function NuevoPost() {
 }
 
 export default NuevoPost;
+

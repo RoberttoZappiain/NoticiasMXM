@@ -51,9 +51,9 @@ const Settings: React.FC = () => {
 
                             </IonListHeader>
                             <SlIdeNotas title= "los volcanes Mauna Loa y Kilauea" date="5/6/2022"/>
-                            <SlIdeNotas title= "los volcanes Mauna Loa y Kilauea" date="22/6/2022"/>
-                            <SlIdeNotas title= "los volcanes Mauna Loa y Kilauea" date="17/9/2022"/>
-                            <SlIdeNotas title= "los volcanes Mauna Loa y Kilauea" date="5/7/2022"/>
+                            <SlIdeNotas title= "Inicia martes despejado se espera cielo nublado por la tarde" date="22/6/2022"/>
+                            <SlIdeNotas title= "RECUPERA FESC 11 VEHÍCULOS CON REPORTE DE ROBO" date="17/9/2022"/>
+                            <SlIdeNotas title= "los primeros Barrios Mágicos de México" date="5/7/2022"/>
                             <SlIdeNotas title= "los volcanes Mauna Loa y Kilauea" date="19/4/2022"/>
                             <SlIdeNotas title= "los volcanes Mauna Loa y Kilauea" date="15/6/2022"/>
 

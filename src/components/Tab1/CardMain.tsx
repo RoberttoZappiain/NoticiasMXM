@@ -13,7 +13,7 @@ const CityTrends: React.FC = () => {
   return (
     <>
       <IonCol size='6'>
-        <IonCard class="action-card" style={{ minHeight: "450px" }}>
+        <IonCard color="gray" class="action-card" style={{ minHeight: "450px" }}>
           <img alt="Silhouette of mountains" src="https://www.eluniversal.com.mx/sites/default/files/styles/347x230px_bloque_hiperlocales/public/2022/11/29/barrio_tlaxcala_slp_barrios_magicos_.jpg" />
           <IonCardHeader>
             <div className="ion-text-justify">
@@ -21,7 +21,7 @@ const CityTrends: React.FC = () => {
             </div>
             <IonCardSubtitle>SLP</IonCardSubtitle>
           </IonCardHeader>
-          <IonRow className="ion-justify-content-start">
+          <IonRow className="ion-justify-content-start" style={{backgroundColor:"black"}}>
             {/* <IonCol size='6'>
                   <IonChip color="danger">
                     <IonIcon icon={skull} color="danger"></IonIcon>
@@ -53,7 +53,7 @@ const CityTrends: React.FC = () => {
         </IonCard>
       </IonCol>
       <IonCol size='6'>
-        <IonCard class="action-card" style={{ minHeight: "450px" }}>
+        <IonCard class="action-card" color="gray" style={{ minHeight: "450px" }}>
           <img alt="Silhouette of mountains" src="https://www.eluniversal.com.mx/sites/default/files/styles/347x230px_bloque_hiperlocales/public/2022/11/29/897117_cenapred_reporte_popocatepetl_4_web.jpg" />
           <IonCardHeader>
             <IonCardTitle><div className="ion-text-justify">
@@ -61,7 +61,92 @@ const CityTrends: React.FC = () => {
             </div></IonCardTitle>
             <IonCardSubtitle>PUEBLA</IonCardSubtitle>
           </IonCardHeader>
-          <IonRow className="ion-justify-content-start">
+          <IonRow className="ion-justify-content-start" style={{backgroundColor:"black"}}>
+            {/* <IonCol size='6'>
+                  <IonChip color="danger">
+                    <IonIcon icon={skull} color="danger"></IonIcon>
+                    <IonLabel>Victimas</IonLabel>
+                  </IonChip>
+                </IonCol> */}
+            <IonCol size='6'>
+              <IonChip color="dark" disabled={true}>
+                <IonIcon icon={calendar} color="dark"></IonIcon>
+                <IonLabel>22/10/2022</IonLabel>
+              </IonChip>
+            </IonCol>
+          </IonRow>
+          <IonGrid>
+            <IonRow>
+              <IonCol size='12'>
+                <IonButton color="dark" size="small" expand="block" fill="solid">Ver mas</IonButton>
+              </IonCol>
+              <IonCol >
+                <IonButton color="danger" size="small" fill="clear">
+                  <IonIcon color="danger" slot="icon-only" icon={heartOutline}></IonIcon>
+                </IonButton>
+                <IonButton size="small" fill="clear">
+                  <IonIcon slot="icon-only" icon={share}></IonIcon>
+                </IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonCard>
+      </IonCol>
+
+
+
+
+
+      <IonCol size='6'>
+        <IonCard color="gray" class="action-card" style={{ minHeight: "450px" }}>
+          <img alt="Silhouette of mountains" src="https://www.elsoldetijuana.com.mx/local/hxjaez-clima-nublado/alternates/LANDSCAPE_480/Clima-nublado" />
+          <IonCardHeader>
+            <div className="ion-text-justify">
+              <h3 style={{ color: "White" }}>Inicia martes despejado se espera cielo nublado por la tarde</h3>
+            </div>
+            <IonCardSubtitle>SLP</IonCardSubtitle>
+          </IonCardHeader>
+          <IonRow className="ion-justify-content-start" style={{backgroundColor:"black"}}>
+            {/* <IonCol size='6'>
+                  <IonChip color="danger">
+                    <IonIcon icon={skull} color="danger"></IonIcon>
+                    <IonLabel>Victimas</IonLabel>
+                  </IonChip>
+                </IonCol> */}
+            <IonCol size='6'>
+              <IonChip color="dark" disabled={true}>
+                <IonIcon icon={calendar} color="dark"></IonIcon>
+                <IonLabel>22/10/2022</IonLabel>
+              </IonChip>
+            </IonCol>
+          </IonRow>
+          <IonGrid >
+            <IonRow className='ion-align-items-end'>
+              <IonCol size='12'>
+                <IonButton color="dark" size="small" expand="block" fill="solid">Ver mas</IonButton>
+              </IonCol>
+              <IonCol >
+                <IonButton color="danger" size="small" fill="clear">
+                  <IonIcon color="danger" slot="icon-only" icon={heartOutline}></IonIcon>
+                </IonButton>
+                <IonButton size="small" fill="clear">
+                  <IonIcon slot="icon-only" icon={share}></IonIcon>
+                </IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonCard>
+      </IonCol>
+      <IonCol size='6'>
+        <IonCard class="action-card" color="gray" style={{ minHeight: "450px" }}>
+          <img alt="Silhouette of mountains" src="https://www.elsoldetijuana.com.mx/policiaca/n35jm9-homicidio-policiaca/alternates/LANDSCAPE_560/Homicidio-policiaca" />
+          <IonCardHeader>
+            <IonCardTitle><div className="ion-text-justify">
+              <h3 style={{ color: "White" }}>Recupera FES once vehiculos con reporte de robo</h3>
+            </div></IonCardTitle>
+            <IonCardSubtitle>PUEBLA</IonCardSubtitle>
+          </IonCardHeader>
+          <IonRow className="ion-justify-content-start" style={{backgroundColor:"black"}}>
             {/* <IonCol size='6'>
                   <IonChip color="danger">
                     <IonIcon icon={skull} color="danger"></IonIcon>
